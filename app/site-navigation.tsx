@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 
 const navigationLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#home" },
   { label: "The Rules", href: "/#rules" },
   { label: "What We Fight For", href: "/#positions" },
   { label: "Join", href: "/join" },
@@ -80,12 +80,10 @@ export default function SiteNavigation() {
         <a
           href="/"
           onClick={closeMenu}
-          className="group inline-flex w-fit items-center gap-3 rounded-sm text-black focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/10"
+          aria-label="Public Service Covenant Home"
+          className="group inline-flex w-fit items-center gap-3 rounded-full text-black focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/10"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-sm font-semibold shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-colors group-hover:border-black/25">
-            PSC
-          </span>
-          <span className="text-sm font-semibold tracking-tight text-black">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-sm font-bold tracking-tight shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-colors group-hover:border-black/25">
             PSC
           </span>
         </a>
@@ -98,37 +96,46 @@ export default function SiteNavigation() {
           ))}
         </div>
 
-        <button
-          type="button"
-          aria-controls="mobile-primary-navigation"
-          aria-expanded={isMenuOpen}
-          aria-label={
-            isMenuOpen ? "Close primary navigation" : "Open primary navigation"
-          }
-          onClick={() => setIsMenuOpen((current) => !current)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 text-black transition-colors hover:border-black/30 hover:bg-black/[0.03] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/10 motion-reduce:transition-none lg:hidden"
-        >
-          <span aria-hidden="true" className="flex w-5 flex-col gap-1.5">
-            <span
-              className={[
-                "h-0.5 rounded-full bg-current transition-transform duration-300 motion-reduce:transition-none",
-                isMenuOpen ? "translate-y-2 rotate-45" : "",
-              ].join(" ")}
-            />
-            <span
-              className={[
-                "h-0.5 rounded-full bg-current transition-opacity duration-300 motion-reduce:transition-none",
-                isMenuOpen ? "opacity-0" : "opacity-100",
-              ].join(" ")}
-            />
-            <span
-              className={[
-                "h-0.5 rounded-full bg-current transition-transform duration-300 motion-reduce:transition-none",
-                isMenuOpen ? "-translate-y-2 -rotate-45" : "",
-              ].join(" ")}
-            />
-          </span>
-        </button>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href="/join"
+            className="inline-flex min-h-10 items-center justify-center rounded-full bg-black px-4 py-2 text-xs sm:text-sm font-semibold text-white shadow-xs transition-colors hover:bg-black/80 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/15"
+          >
+            Join PSC
+          </a>
+
+          <button
+            type="button"
+            aria-controls="mobile-primary-navigation"
+            aria-expanded={isMenuOpen}
+            aria-label={
+              isMenuOpen ? "Close primary navigation" : "Open primary navigation"
+            }
+            onClick={() => setIsMenuOpen((current) => !current)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-black transition-colors hover:border-black/30 hover:bg-black/[0.03] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black/10 motion-reduce:transition-none lg:hidden"
+          >
+            <span aria-hidden="true" className="flex w-5 flex-col gap-1.5">
+              <span
+                className={[
+                  "h-0.5 rounded-full bg-current transition-transform duration-300 motion-reduce:transition-none",
+                  isMenuOpen ? "translate-y-2 rotate-45" : "",
+                ].join(" ")}
+              />
+              <span
+                className={[
+                  "h-0.5 rounded-full bg-current transition-opacity duration-300 motion-reduce:transition-none",
+                  isMenuOpen ? "opacity-0" : "opacity-100",
+                ].join(" ")}
+              />
+              <span
+                className={[
+                  "h-0.5 rounded-full bg-current transition-transform duration-300 motion-reduce:transition-none",
+                  isMenuOpen ? "-translate-y-2 -rotate-45" : "",
+                ].join(" ")}
+              />
+            </span>
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
