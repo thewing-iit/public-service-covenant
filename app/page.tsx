@@ -75,7 +75,7 @@ const positions: PolicyPosition[] = [
     icon: "🌾",
     title: "Farmers & Agriculture",
     category: "agriculture",
-    now: "No legal MSP guarantee. Farmers take loans, get cheated by middlemen, and die by suicide. Paddy farmers alone lost ₹3 lakh crore this season.",
+    now: "No legal MSP guarantee. Farmers across India lose over ₹2 to ₹3 lakh crore every year selling crops below MSP. In non-procurement states, farmers are cheated by middlemen and die by suicide.",
     psc: "Legal MSP guarantee based on Swaminathan formula (C2+50%). Complete loan waiver for small farmers. MGNREGA expansion to 200 days. No forced land acquisition. No FTAs that destroy Indian agriculture.",
   },
   {
@@ -103,7 +103,7 @@ const positions: PolicyPosition[] = [
     icon: "🏥",
     title: "Healthcare",
     category: "public_services",
-    now: "Government spends 1.8% of GDP on health — less than Bangladesh. 60% of Indians pay from their own pocket. One hospital bill can destroy a family. Private hospitals charge what they want.",
+    now: "Government spends only 1.8% of GDP on health — far below the global average of 6% and the 2.5% promised. Over 60% of expenses are paid straight out of citizens' pockets. One hospital bill can destroy a family. Private hospitals charge what they want.",
     psc: "Free healthcare for every citizen. No privatization of hospitals. Public health spending must reach 5% of GDP. Cap prices on essential medicines and procedures. Build public hospitals — not hand money to private chains.",
   },
   {
